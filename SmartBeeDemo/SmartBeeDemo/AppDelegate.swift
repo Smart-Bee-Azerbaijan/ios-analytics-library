@@ -15,9 +15,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
-//        SmartBee.config.token = ""
-//
-//        SmartBee.
+        SmartBee.event.token = ""
+
+        SmartBee.event.eventOccurred(eventType: "", idHash: "", utmSource: "", utmCampaign: "", parameters: [:])
         
         return true
     }
