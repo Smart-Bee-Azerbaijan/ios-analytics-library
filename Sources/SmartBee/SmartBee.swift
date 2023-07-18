@@ -1,8 +1,8 @@
 import ObjectiveC
 
 public class SmartBee: NSObject {
-//    public private(set) var text = "Hello, World!"
-    static let config = SmartBee()
+    
+    public static let config = SmartBee()
 
     public var token: String?
     
