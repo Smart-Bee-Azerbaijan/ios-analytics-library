@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "smartbee",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/elem577/SmartBee",
+      "state" : {
+        "branch" : "main",
+        "revision" : "581a4acb95d107444cf7895c01690d07d5035845"
+      }
+    }
+  ],
+  "version" : 2
+}

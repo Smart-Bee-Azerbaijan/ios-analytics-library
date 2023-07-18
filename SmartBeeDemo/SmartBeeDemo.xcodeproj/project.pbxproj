@@ -8,17 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		AF4EB3242A67122500B72E2E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4EB3232A67122500B72E2E /* AppDelegate.swift */; };
-		AF4EB3262A67122500B72E2E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4EB3252A67122500B72E2E /* SceneDelegate.swift */; };
 		AF4EB3282A67122500B72E2E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4EB3272A67122500B72E2E /* ViewController.swift */; };
 		AF4EB32B2A67122500B72E2E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF4EB3292A67122500B72E2E /* Main.storyboard */; };
 		AF4EB32D2A67122600B72E2E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF4EB32C2A67122600B72E2E /* Assets.xcassets */; };
 		AF4EB3302A67122600B72E2E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF4EB32E2A67122600B72E2E /* LaunchScreen.storyboard */; };
+		AF4EB3392A6712B900B72E2E /* SmartBee in Frameworks */ = {isa = PBXBuildFile; productRef = AF4EB3382A6712B900B72E2E /* SmartBee */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		AF4EB3202A67122500B72E2E /* SmartBeeDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmartBeeDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF4EB3232A67122500B72E2E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		AF4EB3252A67122500B72E2E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		AF4EB3272A67122500B72E2E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		AF4EB32A2A67122500B72E2E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AF4EB32C2A67122600B72E2E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -31,6 +30,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF4EB3392A6712B900B72E2E /* SmartBee in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -57,7 +57,6 @@
 			isa = PBXGroup;
 			children = (
 				AF4EB3232A67122500B72E2E /* AppDelegate.swift */,
-				AF4EB3252A67122500B72E2E /* SceneDelegate.swift */,
 				AF4EB3272A67122500B72E2E /* ViewController.swift */,
 				AF4EB3292A67122500B72E2E /* Main.storyboard */,
 				AF4EB32C2A67122600B72E2E /* Assets.xcassets */,
@@ -83,6 +82,9 @@
 			dependencies = (
 			);
 			name = SmartBeeDemo;
+			packageProductDependencies = (
+				AF4EB3382A6712B900B72E2E /* SmartBee */,
+			);
 			productName = SmartBeeDemo;
 			productReference = AF4EB3202A67122500B72E2E /* SmartBeeDemo.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +113,9 @@
 				Base,
 			);
 			mainGroup = AF4EB3172A67122500B72E2E;
+			packageReferences = (
+				AF4EB3372A6712B900B72E2E /* XCRemoteSwiftPackageReference "SmartBee" */,
+			);
 			productRefGroup = AF4EB3212A67122500B72E2E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -140,7 +145,6 @@
 			files = (
 				AF4EB3282A67122500B72E2E /* ViewController.swift in Sources */,
 				AF4EB3242A67122500B72E2E /* AppDelegate.swift in Sources */,
-				AF4EB3262A67122500B72E2E /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -294,12 +298,13 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = az.smartbee.SmartBeeDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = az.smartbee.demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -321,12 +326,13 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = az.smartbee.SmartBeeDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = az.smartbee.demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -356,6 +362,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		AF4EB3372A6712B900B72E2E /* XCRemoteSwiftPackageReference "SmartBee" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/elem577/SmartBee";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		AF4EB3382A6712B900B72E2E /* SmartBee */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AF4EB3372A6712B900B72E2E /* XCRemoteSwiftPackageReference "SmartBee" */;
+			productName = SmartBee;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = AF4EB3182A67122500B72E2E /* Project object */;
 }
