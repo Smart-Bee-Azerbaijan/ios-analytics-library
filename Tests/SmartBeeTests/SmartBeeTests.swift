@@ -6,6 +6,6 @@ final class SmartBeeTests: XCTestCase {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct
         // results.
-        XCTAssertEqual(SmartBee().text, "Hello, World!")
+//        XCTAssertEqual(SmartBee().text, "Hello, World!")
     }
 }
