@@ -18,12 +18,12 @@ public class SmartBeeEvent: NSObject {
             return
         }
         
-        guard let url = URL(string: "https://smartbee.az/event/request") else { return }
+        guard let url = URL(string: "https://cdnsb.net/mobile_app_events") else { return }
         
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
-        request.addValue("\(token)", forHTTPHeaderField: "Authorization")
+//        request.addValue("\(token)", forHTTPHeaderField: "Authorization")
         
         let payload = EventRequestPayload(eventType: eventType, idHash: idHash, utmSource: utmSource, utmCampaign: utmCampaign, parameters: parameters)
         
@@ -46,6 +46,7 @@ public class SmartBeeEvent: NSObject {
                     logged("empty data")
                     return
                 }
+                print("log: ", data, response)
             }
             
             task.resume()
