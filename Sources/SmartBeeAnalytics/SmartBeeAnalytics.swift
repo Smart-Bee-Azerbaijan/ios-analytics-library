@@ -1,14 +1,11 @@
 import ObjectiveC
 import Foundation
 
-public class SmartBee: NSObject {
+public class SmartBeeAnalytics: NSObject {
     
-    public static let event = SmartBeeEvent()
+    public static let shared = SmartBeeAnalytics()
     
     public override init() { }
-}
-
-public class SmartBeeEvent: NSObject {
     
     public var token: String?
     
@@ -18,7 +15,8 @@ public class SmartBeeEvent: NSObject {
             return
         }
         
-        guard let url = URL(string: "https://cdnsb.net/mobile_app_events") else { return }
+//        guard let url = URL(string: "https://cdnsb.net/mobile_app_events") else { return }
+        guard let url = URL(string: "https://webhook.site/d4837159-cbb6-4e47-9dcd-03942c3ffc60") else { return }
         
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
@@ -56,12 +54,4 @@ public class SmartBeeEvent: NSObject {
     private func logged(_ log: String) {
         print("SMARTBEE EVENTLOG: ", log)
     }
-}
-
-struct EventRequestPayload: Codable {
-    let eventType: String
-    let idHash: String
-    let utmSource: String
-    let utmCampaign: String
-    let parameters: [String: String]
 }

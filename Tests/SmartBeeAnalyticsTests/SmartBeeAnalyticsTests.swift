@@ -1,11 +1,11 @@
 import XCTest
-@testable import SmartBee
+@testable import SmartBeeAnalytics
 
-final class SmartBeeTests: XCTestCase {
+final class SmartBeeAnalyticsTests: XCTestCase {
     func testExample() throws {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct
         // results.
-//        XCTAssertEqual(SmartBee().text, "Hello, World!")
+//        XCTAssertEqual(SmartBeeAnalytics().text, "Hello, World!")
     }
 }
