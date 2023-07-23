@@ -12,11 +12,10 @@
 		AF4EB32B2A67122500B72E2E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF4EB3292A67122500B72E2E /* Main.storyboard */; };
 		AF4EB32D2A67122600B72E2E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF4EB32C2A67122600B72E2E /* Assets.xcassets */; };
 		AF4EB3302A67122600B72E2E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF4EB32E2A67122600B72E2E /* LaunchScreen.storyboard */; };
-		AF4EB3392A6712B900B72E2E /* SmartBee in Frameworks */ = {isa = PBXBuildFile; productRef = AF4EB3382A6712B900B72E2E /* SmartBee */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		AF4EB3202A67122500B72E2E /* SmartBeeDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmartBeeDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF4EB3202A67122500B72E2E /* SmartBeeAnalyticsDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmartBeeAnalyticsDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF4EB3232A67122500B72E2E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AF4EB3272A67122500B72E2E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		AF4EB32A2A67122500B72E2E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -30,7 +29,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AF4EB3392A6712B900B72E2E /* SmartBee in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,7 +38,7 @@
 		AF4EB3172A67122500B72E2E = {
 			isa = PBXGroup;
 			children = (
-				AF4EB3222A67122500B72E2E /* SmartBeeDemo */,
+				AF4EB3222A67122500B72E2E /* SmartBeeAnalyticsDemo */,
 				AF4EB3212A67122500B72E2E /* Products */,
 			);
 			sourceTree = "<group>";
@@ -48,12 +46,12 @@
 		AF4EB3212A67122500B72E2E /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				AF4EB3202A67122500B72E2E /* SmartBeeDemo.app */,
+				AF4EB3202A67122500B72E2E /* SmartBeeAnalyticsDemo.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		AF4EB3222A67122500B72E2E /* SmartBeeDemo */ = {
+		AF4EB3222A67122500B72E2E /* SmartBeeAnalyticsDemo */ = {
 			isa = PBXGroup;
 			children = (
 				AF4EB3232A67122500B72E2E /* AppDelegate.swift */,
@@ -63,15 +61,15 @@
 				AF4EB32E2A67122600B72E2E /* LaunchScreen.storyboard */,
 				AF4EB3312A67122600B72E2E /* Info.plist */,
 			);
-			path = SmartBeeDemo;
+			path = SmartBeeAnalyticsDemo;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		AF4EB31F2A67122500B72E2E /* SmartBeeDemo */ = {
+		AF4EB31F2A67122500B72E2E /* SmartBeeAnalyticsDemo */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = AF4EB3342A67122600B72E2E /* Build configuration list for PBXNativeTarget "SmartBeeDemo" */;
+			buildConfigurationList = AF4EB3342A67122600B72E2E /* Build configuration list for PBXNativeTarget "SmartBeeAnalyticsDemo" */;
 			buildPhases = (
 				AF4EB31C2A67122500B72E2E /* Sources */,
 				AF4EB31D2A67122500B72E2E /* Frameworks */,
@@ -81,12 +79,11 @@
 			);
 			dependencies = (
 			);
-			name = SmartBeeDemo;
+			name = SmartBeeAnalyticsDemo;
 			packageProductDependencies = (
-				AF4EB3382A6712B900B72E2E /* SmartBee */,
 			);
 			productName = SmartBeeDemo;
-			productReference = AF4EB3202A67122500B72E2E /* SmartBeeDemo.app */;
+			productReference = AF4EB3202A67122500B72E2E /* SmartBeeAnalyticsDemo.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -104,7 +101,7 @@
 					};
 				};
 			};
-			buildConfigurationList = AF4EB31B2A67122500B72E2E /* Build configuration list for PBXProject "SmartBeeDemo" */;
+			buildConfigurationList = AF4EB31B2A67122500B72E2E /* Build configuration list for PBXProject "SmartBeeAnalyticsDemo" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -114,13 +111,13 @@
 			);
 			mainGroup = AF4EB3172A67122500B72E2E;
 			packageReferences = (
-				AF4EB3372A6712B900B72E2E /* XCRemoteSwiftPackageReference "SmartBee" */,
+				AF033CF82A6D0A8C00E3CEC9 /* XCRemoteSwiftPackageReference "SmartBeeAnalyticsiOS" */,
 			);
 			productRefGroup = AF4EB3212A67122500B72E2E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				AF4EB31F2A67122500B72E2E /* SmartBeeDemo */,
+				AF4EB31F2A67122500B72E2E /* SmartBeeAnalyticsDemo */,
 			);
 		};
 /* End PBXProject section */
@@ -343,7 +340,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		AF4EB31B2A67122500B72E2E /* Build configuration list for PBXProject "SmartBeeDemo" */ = {
+		AF4EB31B2A67122500B72E2E /* Build configuration list for PBXProject "SmartBeeAnalyticsDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				AF4EB3322A67122600B72E2E /* Debug */,
@@ -352,7 +349,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		AF4EB3342A67122600B72E2E /* Build configuration list for PBXNativeTarget "SmartBeeDemo" */ = {
+		AF4EB3342A67122600B72E2E /* Build configuration list for PBXNativeTarget "SmartBeeAnalyticsDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				AF4EB3352A67122600B72E2E /* Debug */,
@@ -364,23 +361,15 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		AF4EB3372A6712B900B72E2E /* XCRemoteSwiftPackageReference "SmartBee" */ = {
+		AF033CF82A6D0A8C00E3CEC9 /* XCRemoteSwiftPackageReference "SmartBeeAnalyticsiOS" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/elem577/SmartBee";
+			repositoryURL = "https://github.com/elem577/SmartBeeAnalyticsiOS.git";
 			requirement = {
 				branch = main;
 				kind = branch;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		AF4EB3382A6712B900B72E2E /* SmartBee */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = AF4EB3372A6712B900B72E2E /* XCRemoteSwiftPackageReference "SmartBee" */;
-			productName = SmartBee;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = AF4EB3182A67122500B72E2E /* Project object */;
 }
