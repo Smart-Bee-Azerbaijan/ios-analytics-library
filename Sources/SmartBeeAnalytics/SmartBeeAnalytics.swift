@@ -8,15 +8,26 @@ public class SmartBeeAnalytics: NSObject {
     public override init() { }
     
     public var token: String?
+
     
     public func eventOccurred(eventType: String, idHash: String, utmSource: String, utmCampaign: String, parameters: Dictionary<String, String>) {
+        
+        self.eventRequest(eventType: eventType,
+                                  idHash: idHash,
+                                  utmSource: utmSource,
+                                  utmCampaign: utmCampaign,
+                                  parameters: parameters,
+                                  isTry: false)
+    }
+    
+    private func eventRequest(eventType: String, idHash: String, utmSource: String, utmCampaign: String, parameters: Dictionary<String, String>, isTry: Bool) {
+        
         guard let token else {
             logged("token is not set")
             return
         }
         
-//        guard let url = URL(string: "https://cdnsb.net/mobile_app_events") else { return }
-        guard let url = URL(string: "https://webhook.site/d4837159-cbb6-4e47-9dcd-03942c3ffc60") else { return }
+        guard let url = URL(string: "https://cdnsb.net/mobile_app_events") else { return }
         
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
@@ -38,13 +49,25 @@ public class SmartBeeAnalytics: NSObject {
             let task = URLSession.shared.dataTask(with: request) { [self] (data, response, error) in
                 guard error == nil else {
                     logged(error!.localizedDescription)
+                    
+                    if isTry == false {
+                        Timer.scheduledTimer(withTimeInterval: 3.0, repeats: false) { timer in
+                            self.eventRequest(
+                                eventType: eventType,
+                                idHash: idHash,
+                                utmSource: utmSource,
+                                utmCampaign: utmCampaign,
+                                parameters: parameters,
+                                isTry: true)
+                        }
+                    }
                     return
                 }
-                guard let data = data else {
-                    logged("empty data")
-                    return
-                }
-                print("log: ", data, response)
+//                guard let data = data else {
+//                    logged("empty data")
+//                    return
+//                }
+//                print("log: ", data, response)
             }
             
             task.resume()
@@ -52,6 +75,6 @@ public class SmartBeeAnalytics: NSObject {
     }
     
     private func logged(_ log: String) {
-        print("SMARTBEE EVENTLOG: ", log)
+        print("SMARTBEE ANALYTICS LOG: ", log)
     }
 }
