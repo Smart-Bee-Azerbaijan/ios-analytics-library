@@ -16,7 +16,7 @@ To integrate SmartBeeAnalytics into your Xcode project using Swift Package Manag
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/elem577/SmartBeeAnalyticsiOS.git", .upToNextMajor(from: "1.0.0"))
+    .package(url: "https://github.com/Smart-Bee-Azerbaijan/ios-analytics-library.git", .upToNextMajor(from: "1.0.0"))
 ]
 ```
         
