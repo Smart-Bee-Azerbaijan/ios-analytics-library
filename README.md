@@ -1,27 +1,24 @@
-# SmartBee
-
-A description of this package.
-
-
 Introduction
 ============
 
-This documentation provides a step-by-step guide on how to integrate your Android application with SmartBeeAnalytics.
+This documentation provides a step-by-step guide on how to integrate your iOS application with SmartBeeAnalytics.
 
 Integration Steps
 -----------------
 
 Follow the steps below to integrate YourApp with SmartBeeAnalytics:
 
-### Step 1: Import SmartBeeAnalytics SDK
+### Step 1: Swift Package Manager
 
-1.  Place the SmartBeeAnalytics SDK files in a location accessible within your YourApp project.
-2.  Open your project's `build.gradle` file and add the SmartBeeAnalytics SDK as a dependency.
+[Swift Package Manager](https://swift.org/package-manager/) is a tool for managing the distribution of Swift code. It’s integrated with the Swift build system to automate the process of downloading, compiling, and linking dependencies.
 
-    
-    dependencies {
-        implementation files('libs/SmartBeeAnalytics_1.0.0.aar')
-    }
+To integrate SmartBeeAnalytics into your Xcode project using Swift Package Manager, add it to the dependencies value of your `Package.swift`:
+
+```swift
+dependencies: [
+    .package(url: "https://github.com/elem577/SmartBeeAnalyticsiOS.git", .upToNextMajor(from: "1.0.0"))
+]
+```
         
 
 ### Step 2: Initialize SmartBeeAnalytics
@@ -39,33 +36,46 @@ In your `YourApp` class that extends `Application`, override the `onCreate` meth
     }
         
 
-### Step 3: Set token
+### Step 2: Set token
 
-    
-    SmartBeeAnalytics.instance().setToken(YOUR_TOKEN)
+```swift
+import UIKit
+import SmartBeeAnalytics
+
+@main
+class AppDelegate: UIResponder, UIApplicationDelegate {
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        
+        SmartBeeAnalytics.shared.token = YOUR_TOKEN
+        
+        return true
+    }
+}
+```
         
 
 ### Step 4: Sending Events
 
-To send events to SmartBeeAnalytics, you can use the `sendEvent` method. Here's an example of how to use it:
+To send events to SmartBeeAnalytics, you can use the `eventOccurred` method. Here's an example of how to use it:
 
-    
-    private fun sendEvent() {
-        // Create a HashMap to store event parameters (optional)
-        val eventParameters = hashMapOf(
-            "parametr1" to "Value1",
-            "parametr2" to "Value2"
-        )
-    
-        // Send the event to SmartBeeAnalytics
-        SmartBeeAnalytics.instance().sendEvent(
-            eventType = "Your event type",
-            idHash = "Your id hash",
-            utmSource = "Your utm source",
-            utmCampaign = "Your utm campaingn",
-            parameters = eventParameters
-        )
-    }
+```swift
+func eventOccurred() {
+    // Create a Dictionary to store event parameters (optional)
+    val eventParameters = [
+        "parametr1": "Value1",
+        "parametr2": "Value2"
+    ]
+
+    // Send the event to SmartBeeAnalytics
+    SmartBeeAnalytics.shared.eventOccurred(
+        eventType: "Your event type",
+        idHash: "Your id hash",
+        utmSource: "Your utm source",
+        utmCampaign: "Your utm campaingn",
+        parameters: eventParameters
+    )
+}
+```
         
 
 Adjust the event type, idHash, utmSource, utmCampaign, and event parameters according to the events you want to track in YourApp.
