@@ -21,21 +21,6 @@ dependencies: [
 ```
         
 
-### Step 2: Initialize SmartBeeAnalytics
-
-In your `YourApp` class that extends `Application`, override the `onCreate` method, and initialize the SmartBeeAnalytics SDK with your credentials.
-
-    
-    class YourApp : Application() {
-        override fun onCreate() {
-            super.onCreate()
-    
-            // Initialize SmartBeeAnalytics
-            SmartBeeAnalytics.initialize(this)
-        }
-    }
-        
-
 ### Step 2: Set token
 
 ```swift
@@ -54,14 +39,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 ```
         
 
-### Step 4: Sending Events
+### Step 3: Sending Events
 
 To send events to SmartBeeAnalytics, you can use the `eventOccurred` method. Here's an example of how to use it:
 
 ```swift
 func eventOccurred() {
     // Create a Dictionary to store event parameters (optional)
-    val eventParameters = [
+    let eventParameters = [
         "parametr1": "Value1",
         "parametr2": "Value2"
     ]
