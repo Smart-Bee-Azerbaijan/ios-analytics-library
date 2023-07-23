@@ -1,12 +1,12 @@
 {
   "pins" : [
     {
-      "identity" : "smartbee",
+      "identity" : "smartbeeanalyticsios",
       "kind" : "remoteSourceControl",
-      "location" : "https://github.com/elem577/SmartBee",
+      "location" : "https://github.com/elem577/SmartBeeAnalyticsiOS.git",
       "state" : {
         "branch" : "main",
-        "revision" : "e043605d508fb39541d04033a501179d5bd8fbf0"
+        "revision" : "9fbb3f9bd43330bfab66fed177689593cb8e2dab"
       }
     }
   ],

@@ -21,7 +21,7 @@ public class SmartBeeAnalytics: NSObject {
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
-//        request.addValue("\(token)", forHTTPHeaderField: "Authorization")
+        request.addValue("\(token)", forHTTPHeaderField: "Authorization")
         
         let payload = EventRequestPayload(eventType: eventType, idHash: idHash, utmSource: utmSource, utmCampaign: utmCampaign, parameters: parameters)
         
